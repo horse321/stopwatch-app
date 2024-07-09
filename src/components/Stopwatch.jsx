@@ -24,7 +24,7 @@ const Stopwatch = () => {
       const startTime = Date.now() - time;
       intervalRef.current = setInterval(() => {
         setTime(Date.now() - startTime);
-      }, 1000);
+      }, 50); // Update every 10 milliseconds
     }
     setIsRunning(!isRunning);
   };
@@ -44,11 +44,14 @@ const Stopwatch = () => {
   };
 
   const formatTime = (time) => {
+    const milliseconds = Math.floor(time % 1000);
     const seconds = Math.floor((time / 1000) % 60);
     const minutes = Math.floor((time / (1000 * 60)) % 60);
-    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
 
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    // Ensure milliseconds are always displayed as two digits
+    const formattedMilliseconds = milliseconds.toString().padStart(3, '0').substring(0, 2);
+
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${formattedMilliseconds}`;
   };
 
   return (
