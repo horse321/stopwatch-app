@@ -1,8 +1,10 @@
 Stopwatch App
+
 A simple Stopwatch application built using React and Tailwind CSS.
 
 
 Features
+
 Start/Pause Button: Initiates or halts the stopwatch timer.
 Stop Button: Stops the stopwatch timer and displays the final elapsed time.
 Reset Button: Resets the stopwatch timer to zero.
@@ -13,6 +15,7 @@ Tailwind CSS
 Setup Instructions
 
 Prerequisites
+
 Make sure you have the following installed:
 
 Node.js (v12.0.0 or later)
