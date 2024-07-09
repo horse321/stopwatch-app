@@ -24,6 +24,8 @@ Installation
 Clone the repository:
 
 git clone https://github.com/horse321/stopwatch-app.git
+
+
 cd stopwatch-app
 
 Install Dependencies:
